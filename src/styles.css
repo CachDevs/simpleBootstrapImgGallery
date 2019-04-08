@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400, 300);
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  padding: 12px;
+}
+.container .gallery-item {
+  overflow: hidden;
+  padding: 3px;
+}
+.container .gallery-item .box {
+  height: 350px;
+  overflow: hidden;
+}
+.container .gallery-item .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+.container .gallery-item a:focus {
+  outline: none;
+}
+.container .gallery-item a:after {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  right: 3px;
+  left: 3px;
+  top: 3px;
+  bottom: 3px;
+  text-align: center;
+  line-height: 350px;
+  font-size: 30px;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+.container .gallery-item a:hover:after {
+  opacity: 1;
+}
+.container .description {
+  position: relative;
+  height: 40px;
+  padding: 10px 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: left;
+}
+.container .description h4 {
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  .container .modal-dialog {
+    width: 55%;
+    margin: 50 auto;
+  }
+}
+@media (max-width: 768px) {
+  .container .modal-content {
+    height: 250px;
+  }
+}
+.container .modal-dialog {
+  width: 80%;
+}
+.container .modal.fade .modal-dialog {
+  -webkit-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  top: 150px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.container .modal.fade.show .modal-dialog {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0);
+  opacity: 1;
+}
+.container .modal {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.container .gallery-item .modal-body {
+  padding: 0px;
+}
+.container .gallery-item .modal-body img {
+  max-height: 70vh;
+}
+.container .gallery-item button.close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #000;
+  opacity: 1;
+  color: #fff;
+  z-index: 999;
+  right: -12px;
+  top: -12px;
+  border-radius: 50%;
+  font-size: 15px;
+  border: 2px solid #fff;
+  line-height: 25px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+.container .gallery-item button.close:focus {
+  outline: none;
+}
+.container .gallery-item button.close span {
+  position: absolute;
+  left: 5.5px;
+  top: -2px;
+  font-weight: lighter;
+  text-shadow: none;
+}
